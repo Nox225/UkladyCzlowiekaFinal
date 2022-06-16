@@ -1,0 +1,1370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+:root{
+    --clr: #f6f8ec;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    font-size: 20px;
+    background: var(--clr);
+}
+
+.navigation{
+    width: 1100px;
+    height: 120px;
+    background: rgb(175, 98, 98);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.navigation ul{
+    display: flex;
+    width: 1000px;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 150px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 2.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr)
+}
+
+/* .navigation ul li.active a .icon{
+    transform: translateY(-55px);
+} */
+
+.navigation ul li a .text{
+    position: absolute;
+    color: var(--clr);
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text{
+    opacity: 1;
+    transform: translateY(22px);
+}
+
+.indicator{
+    position:absolute;
+    top: -45%;
+    width: 111px;
+    height: 111px;
+    background: rgb(209, 122, 64);
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+}
+
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    background: red;
+    width: 20px;
+    height: 20px;
+    left: -22px;
+    margin-top: -2px;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--clr);
+    background: transparent;
+}
+
+.indicator::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    background: red;
+    width: 20px;
+    height: 20px;
+    right: -22px;
+    margin-top: -2px;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 var(--clr);
+    background: transparent;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(150px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(111px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(111px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(111px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(111px * 4));
+}
+
+.navigation ul li:nth-child(6).active ~ .indicator{
+    transform: translateX(calc(111px * 5));
+}
+
+.navigation ul li:nth-child(7).active ~ .indicator{
+    transform: translateX(calc(111px * 6));
+}
+
+.navigation ul li:nth-child(8).active ~ .indicator{
+    transform: translateX(calc(111px * 7));
+}
+
+.navigation ul li:nth-child(9).active ~ .indicator{
+    transform: translateX(calc(111px * 8));
+}
+
+.navigation ul li:nth-child(1).active a .icon{
+    transform: translateY(-55px);
+}
+
+.navigation ul li:nth-child(2).active a .icon{
+    transform: translateY(-58px);
+}
+
+.navigation ul li:nth-child(3).active a .icon{
+    transform: translateY(-62px);
+}
+
+.navigation ul li:nth-child(4).active a .icon{
+    transform: translateY(-57px);
+}
+
+.navigation ul li:nth-child(5).active a .icon{
+    transform: translateY(-58px);
+}
+
+.navigation ul li:nth-child(6).active a .icon{
+    transform: translateY(-58px);
+}
+
+.navigation ul li:nth-child(7).active a .icon{
+    transform: translateY(-56px);
+}
+
+.navigation ul li:nth-child(8).active a .icon{
+    transform: translateY(-56px);
+}
+
+.navigation ul li:nth-child(9).active a .icon{
+    transform: translateY(-58px);
+}
+
+.navigation ul li:nth-child(1) a .icon{
+    font-size: 2.9em;
+    transform: translateY(7px);
+}
+
+.main{
+    margin-right: 1050px;
+    margin-bottom: 700px;
+    position: absolute;
+}
+
+.glowna{
+    position: absolute;
+    height: 700px;
+    width: 1050px;
+    background: rgb(243, 131, 131);
+    font-size: 25px;
+    color: var(--clr);
+    margin-top: 410px;
+    margin-left: 0px;
+    /* z-index: 1; */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+
+}
+
+.glowna h2{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-left: 125px;
+    margin-top: 150px;
+    font-size: 37px;
+    padding: 45px 50px 20px 50px;
+    border-radius: 100px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+    background-color: rgb(252, 142, 142);
+    width: 800px;
+    height: 250px;
+}
+
+.glowna p{
+    justify-content: center;
+    align-items: center;
+    padding: 110px 50px 20px 50px;
+    font-size: 22px;
+}
+
+/* -----------------------------------Trawienny-------------------------- */
+
+.trawienny{
+    height: 700px;
+    width: 1052px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.jama-ustna{
+    height: 35px;
+    width: 110px;
+    position: absolute;
+    margin-top: 550px;
+    margin-left: 220px;
+    cursor: pointer;
+}
+
+.slinianki{
+    height: 35px;
+    width: 90px;
+    position: absolute;
+    margin-top: 610px;
+    margin-left: 240px;
+    cursor: pointer;
+}
+
+.watroba{
+    height: 35px;
+    width: 90px;
+    position: absolute;
+    margin-top: 795px;
+    margin-left: 200px;
+    cursor: pointer;
+}
+
+.pecherzyk-zolciowy{
+    height: 55px;
+    width: 110px;
+    position: absolute;
+    margin-top: 820px;
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+.dwunastnica{
+    height: 55px;
+    width: 140px;
+    position: absolute;
+    margin-top: 880px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.jelito-g{
+    height: 35px;
+    width: 120px;
+    position: absolute;
+    margin-top: 1030px;
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+.gardlo1{
+    height: 35px;
+    width: 90px;
+    position: absolute;
+    margin-top: 560px;
+    margin-left: 650px;
+    cursor: pointer;
+}
+
+.przelyk{
+    height: 35px;
+    width: 90px;
+    position: absolute;
+    margin-top: 625px;
+    margin-left: 660px;
+    cursor: pointer;
+}
+
+.zoladek{
+    height: 35px;
+    width: 90px;
+    position: absolute;
+    margin-top: 785px;
+    margin-left: 730px;
+    cursor: pointer;
+}
+
+.trzustka{
+    height: 30px;
+    width: 90px;
+    position: absolute;
+    margin-top: 821px;
+    margin-left: 740px;
+    cursor: pointer;
+}
+
+.jelito-c{
+    height: 35px;
+    width: 130px;
+    position: absolute;
+    margin-top: 945px;
+    margin-left: 810px;
+    cursor: pointer;
+}
+
+.odbytnica{
+    height: 35px;
+    width: 230px;
+    position: absolute;
+    margin-top: 1010px;
+    margin-left: 810px;
+    cursor: pointer;
+}
+
+.otwor{
+    height: 35px;
+    width: 170px;
+    position: absolute;
+    margin-top: 1046px;
+    margin-left: 805px;
+    cursor: pointer;
+}
+
+/* -----------------------------------Oddechowy-------------------------- */
+
+.oddechowy{
+    height: 700px;
+    width: 1050px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.pluco{
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    margin-top: 870px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.jama{
+    height: 30px;
+    width: 150px;
+    position: absolute;
+    margin-top: 550px;
+    margin-left: 670px;
+    cursor: pointer;
+}
+
+.gardlo{
+    height: 30px;
+    width: 90px;
+    position: absolute;
+    margin-top: 610px;
+    margin-left: 670px;
+    cursor: pointer;
+}
+
+.krtan{
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 655px;
+    margin-left: 670px;
+    cursor: pointer;
+}
+
+.tchawica{
+    height: 30px;
+    width: 100px;
+    position: absolute;
+    margin-top: 725px;
+    margin-left: 670px;
+    cursor: pointer;
+}
+
+.oskrzela{
+    height: 30px;
+    width: 100px;
+    position: absolute;
+    margin-top: 835px;
+    margin-left: 670px;
+    cursor: pointer;
+}
+
+.pecherzyki{
+    height: 30px;
+    width: 160px;
+    position: absolute;
+    margin-top: 1045px;
+    margin-left: 820px;
+    cursor: pointer;
+}
+
+/* -----------------------------------Kostny------------------------- */
+.kostny{
+    margin-left: 167px;
+    height: 970px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.mostek{
+    height:30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 490px;
+    margin-left: 220px;
+    cursor: pointer;
+}
+
+.zebra{
+    height:30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 635px;
+    margin-left: 220px;
+    cursor: pointer;
+}
+
+.ramienna{
+    height:40px;
+    width: 70px;
+    position: absolute;
+    margin-top: 780px;
+    margin-left: 220px;
+    cursor: pointer;
+}
+
+.przedramienia{
+    height:40px;
+    width: 100px;
+    position: absolute;
+    margin-top: 940px;
+    margin-left: 220px;
+    cursor: pointer;
+}
+
+.reki{
+    height:40px;
+    width: 70px;
+    position: absolute;
+    margin-top: 1100px;
+    margin-left: 220px;
+    cursor: pointer;
+}
+
+.stopy{
+    height:40px;
+    width: 70px;
+    position: absolute;
+    margin-top: 1260px;
+    margin-left: 220px;
+    cursor: pointer;
+}
+
+.czaszka{
+    height:30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 485px;
+    margin-left: 760px;
+    cursor: pointer;
+}
+
+.obojczyk{
+    height:30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 575px;
+    margin-left: 760px;
+    cursor: pointer;
+}
+
+.lopatka{
+    height:30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 665px;
+    margin-left: 760px;
+    cursor: pointer;
+}
+
+.kregoslup{
+    height:30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 755px;
+    margin-left: 760px;
+    cursor: pointer;
+}
+
+.miednicza{
+    height:40px;
+    width: 80px;
+    position: absolute;
+    margin-top: 850px;
+    margin-left: 750px;
+    cursor: pointer;
+}
+
+.krzyzowa{
+    height:40px;
+    width: 80px;
+    position: absolute;
+    margin-top: 960px;
+    margin-left: 750px;
+    cursor: pointer;
+}
+
+.udowa{
+    height:40px;
+    width: 65px;
+    position: absolute;
+    margin-top: 1065px;
+    margin-left: 770px;
+    cursor: pointer;
+}
+
+.rzepka{
+    height:40px;
+    width: 65px;
+    position: absolute;
+    margin-top: 1160px;
+    margin-left: 770px;
+    cursor: pointer;
+}
+
+.podudzia{
+    height:40px;
+    width: 80px;
+    position: absolute;
+    margin-top: 1265px;
+    margin-left: 750px;
+    cursor: pointer;
+}
+
+/* ---------------------------------Miesniowy------------------------ */
+
+.miesniowy{
+    height: 700px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.fas.fa-angle-right{
+    position: absolute;
+    margin-top: 690px;
+    margin-left: 970px;
+    font-size: 80px;
+    cursor: pointer;
+    color:rgb(175, 98, 98);
+    text-shadow: 0 3px 10px rgba(0,0,0, 0.3);
+}
+
+.fas.fa-angle-left{
+    position: absolute;
+    margin-top: 690px;
+    margin-left: 40px;
+    font-size: 80px;
+    cursor: pointer;
+    color:rgb(175, 98, 98);
+    text-shadow: 0 3px 10px rgba(0,0,0, 0.3);
+}
+
+.fas.fa-angle-right:hover{
+    transform: scale(1.2);
+}
+
+.fas.fa-angle-left:hover{
+    transform: scale(1.2);
+}
+
+.zwacz{
+    height:30px;
+    width: 200px;
+    position: absolute;
+    margin-top: 468px;
+    margin-left: 170px;
+    cursor: pointer;
+}
+
+.ramie2{
+    height: 40px;
+    width: 210px;
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 170px;
+    cursor: pointer;
+}
+
+.oko{
+    height: 25px;
+    width: 270px;
+    position: absolute;
+    margin-top: 444px;
+    margin-left: 620px;
+    cursor: pointer;
+}
+
+.usta{
+    height: 25px;
+    width: 250px;
+    position: absolute;
+    margin-top: 470px;
+    margin-left: 620px;
+    cursor: pointer;
+}
+
+.brzuch-skos{
+    height: 40px;
+    width: 240px;
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 620px;
+    cursor: pointer;
+}
+
+.brzuch-prosty{
+    height: 40px;
+    width: 270px;
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 620px;
+    cursor: pointer;
+}
+
+.udo4{
+    height: 60px;
+    width: 240px;
+    position: absolute;
+    margin-top: 810px;
+    margin-left: 620px;
+    cursor: pointer;
+}
+
+.kaptur{
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    margin-top: 505px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.ramie3{
+    height: 40px;
+    width: 230px;
+    position: absolute;
+    margin-top: 595px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.zebro{
+    height: 40px;
+    width: 210px;
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.lydka{
+    height: 40px;
+    width: 180px;
+    position: absolute;
+    margin-top: 930px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.naramie{
+    height: 40px;
+    width: 160px;
+    position: absolute;
+    margin-top: 540px;
+    margin-left: 795px;
+    cursor: pointer;
+}
+
+.grzbiet{
+    height: 40px;
+    width: 210px;
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 795px;
+    cursor: pointer;
+}
+
+.poslad{
+    height: 40px;
+    width: 170px;
+    position: absolute;
+    margin-top: 740px;
+    margin-left: 795px;
+    cursor: pointer;
+}
+
+.udo2{
+    height: 40px;
+    width: 175px;
+    position: absolute;
+    margin-top: 830px;
+    margin-left: 795px;
+    cursor: pointer;
+}
+
+/* -----------------------------------Nerwowy------------------------ */
+.nerwowy{
+    height: 700px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.mozgowie{
+    height: 30px;
+    width: 95px;
+    position: absolute;
+    margin-top: 470px;
+    margin-left: 700px;
+    cursor: pointer;
+}
+
+.szyjny{
+    height: 30px;
+    width: 105px;
+    position: absolute;
+    margin-top: 507px;
+    margin-left: 700px;
+    cursor: pointer;
+}
+
+.kregowy{
+    height: 30px;
+    width: 130px;
+    position: absolute;
+    margin-top: 560px;
+    margin-left: 700px;
+    cursor: pointer;
+}
+
+.miedzyzebrowy{
+    height: 30px;
+    width: 190px;
+    position: absolute;
+    margin-top: 603px;
+    margin-left: 700px;
+    cursor: pointer;
+}
+
+.zwoje{
+    height: 30px;
+    width: 140px;
+    position: absolute;
+    margin-top: 635px;
+    margin-left: 700px;
+    cursor: pointer;
+}
+
+.lokciowy{
+    height: 30px;
+    width: 125px;
+    position: absolute;
+    margin-top: 667px;
+    margin-left: 700px;
+    cursor: pointer;
+}
+
+.kulszowy{
+    height: 30px;
+    width: 130px;
+    position: absolute;
+    margin-top: 740px;
+    margin-left: 700px;
+    cursor: pointer;
+}
+
+.piszczel{
+    height: 30px;
+    width: 155px;
+    position: absolute;
+    margin-top: 933px;
+    margin-left: 700px;
+    cursor: pointer;
+}
+
+.osrodkowy{
+    height: 30px;
+    width: 230px;
+    position: absolute;
+    margin-top: 933px;
+    margin-left: 120px;
+    cursor: pointer;
+}
+
+.obwodowy{
+    height: 30px;
+    width: 230px;
+    position: absolute;
+    margin-top: 1000px;
+    margin-left: 120px;
+    cursor: pointer;
+}
+/* ---------------------------------Krwionosny----------------------- */
+.krwionosny{
+    height: 700px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.zylaglowna{
+    height:30px;
+    width: 110px;
+    position: absolute;
+    margin-top: 540px;
+    margin-left: 110px;
+    cursor: pointer;
+}
+
+.tetnica{
+    height:30px;
+    width: 130px;
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 90px;
+    cursor: pointer;
+}
+
+.przedsionek-p{
+    height:30px;
+    width: 170px;
+    position: absolute;
+    margin-top: 664px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.komora-p{
+    height:30px;
+    width: 140px;
+    position: absolute;
+    margin-top: 730px;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+.aorta{
+    height:30px;
+    width: 60px;
+    position: absolute;
+    margin-top: 545px;
+    margin-left: 840px;
+    cursor: pointer;
+}
+
+.zylaplucna{
+    height:30px;
+    width: 100px;
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 840px;
+    cursor: pointer;
+}
+
+.przedsionek-l{
+    height:30px;
+    width: 160px;
+    position: absolute;
+    margin-top: 665px;
+    margin-left: 840px;
+    cursor: pointer;
+}
+
+.komora-l{
+    height:30px;
+    width: 120px;
+    position: absolute;
+    margin-top: 730px;
+    margin-left: 840px;
+    cursor: pointer;
+}
+
+.serce{
+    height:30px;
+    width: 50px;
+    position: absolute;
+    margin-top: 795px;
+    margin-left: 840px;
+    cursor: pointer;
+}
+
+/* -----------------------------------Popup-------------------------- */
+
+.details-container{
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.details{
+    background: rgb(247, 125, 125);
+    position: relative;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 0.5rem 3rem;
+    height: 975px;
+    width: 1200px;  
+}
+
+.details img{
+    border-radius: 5px;
+    width: 1130px;
+}
+
+.details h3{
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--clr);
+}
+
+.details p{
+    background-color: rgb(252, 142, 142);
+    border-radius: 5px;
+    padding: 50px;
+    margin: 50px 0;
+    font-size: 20px;
+    color: var(--clr);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.close-details{
+    color: #eee;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    margin-bottom: 900px;
+    margin-left: 1100px;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.details-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ---------------------------------Rozrodczy--------------------------- */
+
+.sex-container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 1050px;
+    font-size: 25px;
+    color: var(--clr);
+    margin-top: 410px;
+    margin-left: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.sex-container .male-text{
+    text-align: center;
+    color:rgb(196, 78, 97);
+    margin-right: 90px;
+    margin-top: -30px;
+    font-size: 35px;
+    cursor: default;
+    transition: all 0.5s ease;
+}
+
+.sex-container .female-text{
+    text-align: center;
+    color:rgb(196, 78, 97);
+    margin-left: 90px;
+    margin-top: -30px;
+    font-size: 35px;
+    cursor: default;
+    transition: all 0.5s ease;
+}
+
+.male{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 300px;
+    height: 300px;
+    background: rgb(196, 78, 97);
+    margin-right: 90px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.male:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    background-color: rgb(18, 29, 155);
+}
+
+.male:hover + .male-text{
+    color: rgb(18, 29, 155);
+    transition: all 0.5s ease;
+}
+
+.female{
+    text-align: center;
+    color: white;
+    width: 300px;
+    height: 300px;
+    background: rgb(196, 78, 97);
+    margin-bottom: 50px;
+    margin-left: 90px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.female:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    background-color: rgb(145, 20, 130);
+}
+
+.female:hover + .female-text{
+    color: rgb(145, 20, 130);
+    transition: all 0.5s ease;
+}
+
+.male i{
+    margin-top: 50px;
+    font-size: 200px;
+}
+
+.female i{
+    margin-top: 50px;
+    font-size: 200px;
+}
+
+.rozrodczyM{
+    height: 700px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.rozrodczyK{
+    height: 700px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.pecherzyk{
+    height: 30px;
+    width: 180px;
+    position: absolute;
+    margin-top: 472px;
+    margin-left: 445px;
+    cursor: pointer;
+}
+
+.penis{
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    margin-top: 745px;
+    margin-left: 445px;
+    cursor: pointer;
+}
+
+.cewka{
+    height: 30px;
+    width: 140px;
+    position: absolute;
+    margin-top: 1018px;
+    margin-left: 610px;
+    cursor: pointer;
+}
+
+.prostata{
+    height: 30px;
+    width: 87px;
+    position: absolute;
+    margin-top: 470px;
+    margin-left: 640px;
+    cursor: pointer;
+}
+
+.nasieniowod{
+    height: 30px;
+    width: 120px;
+    position: absolute;
+    margin-top: 745px;
+    margin-left: 880px;
+    cursor: pointer;
+}
+
+.jadro{
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 845px;
+    margin-left: 930px;
+    cursor: pointer;
+}
+
+.moszna{
+    height: 30px;
+    width: 75px;
+    position: absolute;
+    margin-top: 943px;
+    margin-left: 920px;
+    cursor: pointer;
+}
+
+.jajowod{
+    height: 30px;
+    width: 75px;
+    position: absolute;
+    margin-top: 520px;
+    margin-left: 140px;
+    cursor: pointer;
+}
+
+.jajnik{
+    height: 30px;
+    width: 75px;
+    position: absolute;
+    margin-top: 780px;
+    margin-left: 140px;
+    cursor: pointer;
+}
+
+.pochwa{
+    height: 30px;
+    width: 75px;
+    position: absolute;
+    margin-top: 917px;
+    margin-left: 140px;
+    cursor: pointer;
+}
+
+.macica{
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    margin-top: 520px;
+    margin-left: 303px;
+    cursor: pointer;
+}
+
+/* ---------------------------------Hormonalny--------------------------- */
+
+.hormonalny{
+    height: 612.5px;
+    position: absolute;
+    margin-top: 410px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.szyszynka{
+    height: 40px;
+    width: 140px;
+    position: absolute;
+    margin-top: 416px;
+    margin-left: 250px;
+    cursor: pointer;
+}
+
+.grasica{
+    height: 40px;
+    width: 140px;
+    position: absolute;
+    margin-top: 602px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nerka{
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    margin-top: 713px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.trzustka{
+    height: 40px;
+    width: 130px;
+    position: absolute;
+    margin-top: 768px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.jajnik1{
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    margin-top: 820px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.przysadka{
+    height: 40px;
+    width: 150px;
+    position: absolute;
+    margin-top: 415px;
+    margin-left: 680px;
+    cursor: pointer;
+}
+
+.grasica1{
+    height: 40px;
+    width: 120px;
+    position: absolute;
+    margin-top: 630px;
+    margin-left: 910px;
+    cursor: pointer;
+}
+
+.nerka1{
+    height: 40px;
+    width: 85px;
+    position: absolute;
+    margin-top: 690px;
+    margin-left: 940px;
+    cursor: pointer;
+}
+
+.trzustka1{
+    height: 40px;
+    width: 125px;
+    position: absolute;
+    margin-top: 803px;
+    margin-left: 900px;
+    cursor: pointer;
+}
+
+.jadro1{
+    height: 40px;
+    width: 85px;
+    position: absolute;
+    margin-top: 860px;
+    margin-left: 940px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    left: -100px;
+    position: absolute;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #e6acac; 
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(227, 104, 104); 
+    border-radius: 20px;
+  }
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(214, 44, 44); 
+  }
